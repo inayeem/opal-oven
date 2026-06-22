@@ -291,24 +291,9 @@ function buildCard(m) {
             <p class="macaron-desc">${m.desc}</p>
             <div class="macaron-footer">
                 <span class="macaron-price">${m.price}</span>
-                <button class="macaron-add" aria-label="Add ${m.name} to order">Add to Order</button>
             </div>
         </div>
     `;
-
-    card.querySelector('.macaron-add').addEventListener('click', (e) => {
-        const btn = e.currentTarget;
-        btn.textContent = 'Added ✦';
-        btn.style.background = 'var(--espresso)';
-        btn.style.color = 'var(--gold-light)';
-        btn.style.borderColor = 'var(--espresso)';
-        setTimeout(() => {
-            btn.textContent = 'Add to Order';
-            btn.style.background = '';
-            btn.style.color = '';
-            btn.style.borderColor = '';
-        }, 2000);
-    });
 
     return card;
 }
