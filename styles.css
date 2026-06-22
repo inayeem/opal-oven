@@ -210,6 +210,7 @@ button {
     color: var(--espresso);
     background: var(--gold);
     padding: 10px 22px;
+    border-radius: 6px;
     transition: background var(--transition-fast), color var(--transition-fast);
     white-space: nowrap;
 }
@@ -285,6 +286,7 @@ button {
     color: var(--espresso);
     background: var(--gold);
     padding: 14px 28px;
+    border-radius: 6px;
     display: inline-block;
     margin-top: 8px;
 }
@@ -295,6 +297,7 @@ button {
     height: 44vh;
     min-height: 340px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -326,8 +329,13 @@ button {
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 0 24px;
+    padding: 20px 24px 0;
     max-width: 860px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-eyebrow-row {
@@ -389,6 +397,80 @@ button {
 
 .desktop-br { display: block; }
 
+/* ---------- Scroll Indicator ---------- */
+.hero-scroll {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 32px;
+    padding-bottom: 0;
+}
+
+
+.scroll-track {
+    width: 1px;
+    height: 48px;
+    background: rgba(253,250,245,0.2);
+    overflow: hidden;
+}
+
+.scroll-thumb {
+    width: 100%;
+    height: 50%;
+    background: var(--gold);
+    animation: scrollPulse 2.4s ease infinite;
+}
+
+@keyframes scrollPulse {
+    0%   { transform: translateY(-100%); }
+    100% { transform: translateY(200%); }
+}
+
+/* ---------- Marquee ---------- */
+.marquee-strip {
+    background: var(--espresso);
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+}
+
+.marquee-content {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 16px 28px;
+    white-space: nowrap;
+    animation: marquee 38s linear infinite;
+}
+
+.marquee-content span {
+    font-family: var(--font-ui);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(253,250,245,0.55);
+    font-weight: 300;
+}
+
+.marquee-content .dot {
+    color: var(--gold);
+    font-size: 0.5rem;
+    letter-spacing: 0;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
 /* ---------- Buttons ---------- */
 .btn-primary {
     display: inline-block;
@@ -400,6 +482,7 @@ button {
     color: var(--espresso);
     background: var(--gold);
     padding: 16px 36px;
+    border-radius: 6px;
     transition: background var(--transition-fast), transform 0.2s ease;
 }
 
@@ -418,6 +501,7 @@ button {
     color: rgba(253,250,245,0.8);
     border: 1px solid rgba(253,250,245,0.3);
     padding: 15px 36px;
+    border-radius: 6px;
     transition: color var(--transition-fast), border-color var(--transition-fast), transform 0.2s ease;
 }
 
@@ -437,6 +521,7 @@ button {
     color: var(--espresso);
     border: 1px solid var(--gold);
     padding: 14px 32px;
+    border-radius: 6px;
     transition: background var(--transition-fast), color var(--transition-fast), transform 0.2s ease;
 }
 
@@ -550,6 +635,7 @@ button {
 .story-img-frame {
     aspect-ratio: 4/5;
     overflow: hidden;
+    border-radius: 6px;
     background: var(--ivory-deep);
 }
 
@@ -580,7 +666,7 @@ button {
 
 /* ---------- Collection ---------- */
 .collection {
-    padding: 120px 0;
+    padding: 72px 0 120px;
     background: var(--ivory);
 }
 
@@ -616,6 +702,7 @@ button {
     color: var(--warm-gray);
     border: 1px solid var(--border);
     padding: 9px 20px;
+    border-radius: 6px;
     background: transparent;
     transition: all var(--transition-fast);
     cursor: pointer;
@@ -639,6 +726,7 @@ button {
 .macaron-card {
     background: var(--cream);
     border: 1px solid var(--border-soft);
+    border-radius: 6px;
     transition: transform var(--transition), box-shadow var(--transition), opacity 0.35s ease;
     cursor: default;
     overflow: hidden;
@@ -839,6 +927,7 @@ button {
 .gift-card {
     background: rgba(255,255,255,0.04);
     border: 1px solid var(--border);
+    border-radius: 6px;
     transition: transform var(--transition), border-color var(--transition);
     position: relative;
     overflow: hidden;
@@ -1031,6 +1120,7 @@ button {
 .custom-featured-img {
     position: relative;
     overflow: hidden;
+    border-radius: 6px;
 }
 
 .custom-featured-img img {
@@ -1328,7 +1418,7 @@ button {
     transition: border-color var(--transition-fast), background var(--transition-fast);
     width: 100%;
     -webkit-appearance: none;
-    border-radius: 0;
+    border-radius: 6px;
 }
 
 .form-group select {
@@ -1537,6 +1627,8 @@ button {
     .nav-hamburger { display: flex; }
 
     .desktop-br { display: none; }
+    .hero-scroll { display: none; }
+    .marquee-strip { display: none; }
 
     .story-inner,
     .contact-inner {
@@ -1614,11 +1706,22 @@ button {
 
     .filter-tabs {
         gap: 6px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .filter-tabs::-webkit-scrollbar {
+        display: none;
     }
 
     .filter-tab {
         padding: 8px 14px;
         font-size: 0.6rem;
+        flex-shrink: 0;
     }
 
     .story-inner,
