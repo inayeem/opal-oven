@@ -328,7 +328,7 @@ const cardObserver = new IntersectionObserver((entries) => {
             const card = entry.target;
             const siblings = [...card.parentElement.querySelectorAll('.macaron-card:not(.hidden)')];
             const idx = siblings.indexOf(card) % 4;
-            card.style.transitionDelay = `${idx * 0.07}s`;
+            card.style.transitionDelay = `${idx * 0.04}s`;
             card.classList.add('visible');
             cardObserver.unobserve(card);
         }

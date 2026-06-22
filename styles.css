@@ -1591,7 +1591,7 @@ button {
 .reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.75s ease, transform 0.75s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .reveal.visible {
@@ -1665,6 +1665,7 @@ button {
     .hero-actions {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 24px;
     }
 
     .btn-primary, .btn-ghost {
