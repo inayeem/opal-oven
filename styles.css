@@ -127,11 +127,6 @@ button {
     right: 0;
     z-index: 1000;
     padding: 28px 48px;
-    transition: padding var(--transition), background var(--transition), backdrop-filter var(--transition);
-}
-
-.nav.scrolled {
-    padding: 16px 48px;
     background: rgba(30, 17, 10, 0.96);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -309,7 +304,7 @@ button {
     background-image: url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=2000&q=80');
     background-size: cover;
     background-position: center;
-    transform: scale(1.05);
+    transform: none;
     transition: transform 8s ease;
     background-color: var(--mocha);
 }
@@ -329,7 +324,7 @@ button {
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 20px 24px 0;
+    padding: 80px 24px 0;
     max-width: 860px;
     flex: 1;
     display: flex;
@@ -368,7 +363,8 @@ button {
     font-weight: 400;
     color: var(--cream);
     line-height: 1.08;
-    margin-bottom: 28px;
+    margin-top: 8px;
+    margin-bottom: 36px;
     letter-spacing: -0.01em;
 }
 
@@ -404,9 +400,8 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 0;
     margin-top: 32px;
-    padding-bottom: 0;
 }
 
 
@@ -1622,7 +1617,6 @@ button {
 
 @media (max-width: 900px) {
     .nav { padding: 22px 28px; }
-    .nav.scrolled { padding: 14px 28px; }
     .nav-links, .nav-cta { display: none; }
     .nav-hamburger { display: flex; }
 
@@ -1677,7 +1671,6 @@ button {
 
 @media (max-width: 580px) {
     .nav { padding: 18px 20px; }
-    .nav.scrolled { padding: 12px 20px; }
 
     .hero-actions {
         flex-direction: column;

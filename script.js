@@ -232,10 +232,6 @@ function runLoader() {
 }
 runLoader();
 
-/* ---- Scroll-based nav ---- */
-window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
-}, { passive: true });
 
 /* ---- Hamburger / Mobile Menu ---- */
 hamburger.addEventListener('click', () => {
@@ -252,16 +248,6 @@ document.querySelectorAll('.mobile-link, .mobile-cta').forEach(link => {
     });
 });
 
-/* ---- Hero parallax ---- */
-const heroBg = document.querySelector('.hero-bg-image');
-if (heroBg) {
-    window.addEventListener('scroll', () => {
-        const y = window.scrollY;
-        if (y < window.innerHeight * 1.2) {
-            heroBg.style.transform = `scale(1.05) translateY(${y * 0.18}px)`;
-        }
-    }, { passive: true });
-}
 
 /* ---- Build Macaron Cards ---- */
 function buildCard(m) {
