@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opal Oven — Artisan Macarons</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="loader">
+        <div class="loader-inner">
+            <p class="loader-name">Opal Oven</p>
+            <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">
+                <span class="logo-mark">✦</span>
+                <span class="logo-name">Opal Oven</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#collection" class="nav-link">Collection</a></li>
+                <li><a href="#gifting" class="nav-link">Gifting</a></li>
+                <li><a href="#custom" class="nav-link">Custom Orders</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Order Now</a>
+            <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+                <span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#collection" class="mobile-link">Collection</a></li>
+            <li><a href="#gifting" class="mobile-link">Gifting</a></li>
+            <li><a href="#custom" class="mobile-link">Custom Orders</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="mobile-cta">Order Now</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-bg-image"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-eyebrow-row">
+                <span class="eyebrow-line"></span>
+                <p class="hero-eyebrow">Est. 2026 &nbsp;·&nbsp; Paris-Trained Artisans</p>
+                <span class="eyebrow-line"></span>
+            </div>
+            <h1 class="hero-title">The Art of<br><em>the Macaron</em></h1>
+            <div class="hero-actions">
+                <a href="#collection" class="btn-primary">Explore the Collection</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span class="scroll-label">Scroll</span>
+            <div class="scroll-track"><div class="scroll-thumb"></div></div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-strip" aria-hidden="true">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>French Vanilla</span><span class="dot">✦</span>
+                <span>Bulgarian Rose</span><span class="dot">✦</span>
+                <span>Lavender Honey</span><span class="dot">✦</span>
+                <span>Dark Chocolate</span><span class="dot">✦</span>
+                <span>Pistachio</span><span class="dot">✦</span>
+                <span>Champagne</span><span class="dot">✦</span>
+                <span>Matcha</span><span class="dot">✦</span>
+                <span>Crème Brûlée</span><span class="dot">✦</span>
+                <span>Yuzu Citrus</span><span class="dot">✦</span>
+                <span>Honey Saffron</span><span class="dot">✦</span>
+                <span>Cassis</span><span class="dot">✦</span>
+                <span>Earl Grey</span><span class="dot">✦</span>
+                <span>Passion Fruit</span><span class="dot">✦</span>
+                <span>Burgundy Rose</span><span class="dot">✦</span>
+                <span>Cherry Blossom</span><span class="dot">✦</span>
+                <span>Peach Bellini</span><span class="dot">✦</span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span>French Vanilla</span><span class="dot">✦</span>
+                <span>Bulgarian Rose</span><span class="dot">✦</span>
+                <span>Lavender Honey</span><span class="dot">✦</span>
+                <span>Dark Chocolate</span><span class="dot">✦</span>
+                <span>Pistachio</span><span class="dot">✦</span>
+                <span>Champagne</span><span class="dot">✦</span>
+                <span>Matcha</span><span class="dot">✦</span>
+                <span>Crème Brûlée</span><span class="dot">✦</span>
+                <span>Yuzu Citrus</span><span class="dot">✦</span>
+                <span>Honey Saffron</span><span class="dot">✦</span>
+                <span>Cassis</span><span class="dot">✦</span>
+                <span>Earl Grey</span><span class="dot">✦</span>
+                <span>Passion Fruit</span><span class="dot">✦</span>
+                <span>Burgundy Rose</span><span class="dot">✦</span>
+                <span>Cherry Blossom</span><span class="dot">✦</span>
+                <span>Peach Bellini</span><span class="dot">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collection -->
+    <section class="collection" id="collection">
+        <div class="container">
+            <div class="collection-header reveal">
+                <p class="section-eyebrow">The Full Collection</p>
+                <h2 class="section-title">Flavors</h2>
+                <p class="collection-sub">Priced per piece. Available individually or as part of our curated gift selections.<br>Minimum order of six.</p>
+            </div>
+
+            <div class="filter-tabs" role="tablist">
+                <button class="filter-tab active" data-filter="all" role="tab">All Flavors</button>
+                <button class="filter-tab" data-filter="Signature" role="tab">Signature</button>
+                <button class="filter-tab" data-filter="Classic" role="tab">Classic</button>
+                <button class="filter-tab" data-filter="Floral" role="tab">Floral</button>
+                <button class="filter-tab" data-filter="Fruity" role="tab">Fruity</button>
+                <button class="filter-tab" data-filter="Prestige" role="tab">Prestige</button>
+                <button class="filter-tab" data-filter="Tea Series" role="tab">Tea Series</button>
+                <button class="filter-tab" data-filter="Seasonal" role="tab">Seasonal</button>
+            </div>
+
+            <div class="macaron-grid" id="macaronGrid"></div>
+        </div>
+    </section>
+
+    <!-- Gifting -->
+    <section class="gifting" id="gifting">
+        <div class="container">
+            <div class="gifting-header reveal">
+                <p class="section-eyebrow">The Art of Gifting</p>
+                <h2 class="section-title">Curated Collections<br>for Every Occasion</h2>
+            </div>
+            <div class="gift-grid">
+                <div class="gift-card reveal">
+                    <div class="gift-visual gv-6">
+                        <div class="gift-circles">
+                            <div class="gc" style="--bc:#F0C8CC;--bk:#D48890;top:30%;left:20%"></div>
+                            <div class="gc" style="--bc:#BCDC98;--bk:#78A855;top:20%;left:50%"></div>
+                            <div class="gc" style="--bc:#EAC870;--bk:#B87A28;top:42%;left:65%"></div>
+                            <div class="gc" style="--bc:#D8C8E8;--bk:#9880B8;top:55%;left:35%"></div>
+                            <div class="gc" style="--bc:#B8C8D8;--bk:#7090A8;top:25%;left:78%"></div>
+                            <div class="gc" style="--bc:#F8F090;--bk:#E0C820;top:60%;left:15%"></div>
+                        </div>
+                        <div class="gift-ribbon"></div>
+                    </div>
+                    <div class="gift-info">
+                        <span class="gift-count">Box of 6</span>
+                        <h3 class="gift-name">La Petite Boîte</h3>
+                        <p class="gift-desc">Six hand-selected macarons in our signature ivory gift box, tied with grosgrain ribbon.</p>
+                        <span class="gift-price">From $32</span>
+                    </div>
+                </div>
+                <div class="gift-card gift-card--hero reveal">
+                    <div class="gift-badge">Most Loved</div>
+                    <div class="gift-visual gv-12">
+                        <div class="gift-circles">
+                            <div class="gc" style="--bc:#F8EDCC;--bk:#E0C068;top:15%;left:15%"></div>
+                            <div class="gc" style="--bc:#F0C8CC;--bk:#D48890;top:12%;left:40%"></div>
+                            <div class="gc" style="--bc:#D8C8E8;--bk:#9880B8;top:18%;left:65%"></div>
+                            <div class="gc" style="--bc:#8A6050;--bk:#3D2010;top:38%;left:8%"></div>
+                            <div class="gc" style="--bc:#BCDC98;--bk:#78A855;top:35%;left:33%"></div>
+                            <div class="gc" style="--bc:#F0809A;--bk:#C02050;top:32%;left:58%"></div>
+                            <div class="gc" style="--bc:#9898D8;--bk:#4848A8;top:10%;left:82%"></div>
+                            <div class="gc" style="--bc:#EAC870;--bk:#B87A28;top:56%;left:22%"></div>
+                            <div class="gc" style="--bc:#F8F090;--bk:#E0C820;top:60%;left:48%"></div>
+                            <div class="gc" style="--bc:#9868B0;--bk:#4A1858;top:55%;left:72%"></div>
+                            <div class="gc" style="--bc:#A8D090;--bk:#5A9040;top:38%;left:82%"></div>
+                            <div class="gc" style="--bc:#F8B858;--bk:#D87018;top:72%;left:35%"></div>
+                        </div>
+                        <div class="gift-ribbon gift-ribbon--gold"></div>
+                    </div>
+                    <div class="gift-info">
+                        <span class="gift-count">Box of 12</span>
+                        <h3 class="gift-name">La Boîte Classique</h3>
+                        <p class="gift-desc">Our signature twelve-piece collection presented in a lacquered keepsake box — the definitive Opal Oven statement.</p>
+                        <span class="gift-price">From $62</span>
+                    </div>
+                </div>
+                <div class="gift-card reveal">
+                    <div class="gift-visual gv-24">
+                        <div class="gift-circles">
+                            <div class="gc" style="--bc:#F8EDCC;--bk:#E0C068;top:8%;left:10%"></div>
+                            <div class="gc" style="--bc:#F0C8CC;--bk:#D48890;top:8%;left:32%"></div>
+                            <div class="gc" style="--bc:#D8C8E8;--bk:#9880B8;top:8%;left:54%"></div>
+                            <div class="gc" style="--bc:#8A6050;--bk:#3D2010;top:8%;left:76%"></div>
+                            <div class="gc" style="--bc:#BCDC98;--bk:#78A855;top:32%;left:10%"></div>
+                            <div class="gc" style="--bc:#F0809A;--bk:#C02050;top:32%;left:32%"></div>
+                            <div class="gc" style="--bc:#EAC870;--bk:#B87A28;top:32%;left:54%"></div>
+                            <div class="gc" style="--bc:#F8F090;--bk:#E0C820;top:32%;left:76%"></div>
+                            <div class="gc" style="--bc:#9868B0;--bk:#4A1858;top:56%;left:10%"></div>
+                            <div class="gc" style="--bc:#A8D090;--bk:#5A9040;top:56%;left:32%"></div>
+                            <div class="gc" style="--bc:#F8B858;--bk:#D87018;top:56%;left:54%"></div>
+                            <div class="gc" style="--bc:#9898D8;--bk:#4848A8;top:56%;left:76%"></div>
+                        </div>
+                        <div class="gift-ribbon gift-ribbon--dark"></div>
+                    </div>
+                    <div class="gift-info">
+                        <span class="gift-count">Box of 24</span>
+                        <h3 class="gift-name">La Grande Collection</h3>
+                        <p class="gift-desc">The ultimate Opal Oven experience — twenty-four macarons in an heirloom-quality presentation box.</p>
+                        <span class="gift-price">From $118</span>
+                    </div>
+                </div>
+            </div>
+            <div class="gifting-note reveal">
+                <p>All gift boxes include a handwritten card. Corporate gifting and fully bespoke orders are warmly welcomed.</p>
+                <a href="#contact" class="btn-outline">Inquire About Custom Orders</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Orders -->
+    <section class="custom-orders" id="custom">
+        <div class="container">
+            <div class="custom-header reveal">
+                <p class="section-eyebrow">Beyond the Box</p>
+                <h2 class="section-title">Custom Orders</h2>
+                <p class="custom-sub">Every milestone deserves something extraordinary. We design bespoke macaron creations for weddings, celebrations, corporate events, and more — each one a one-of-a-kind edible work of art.</p>
+            </div>
+
+            <div class="custom-featured reveal">
+                <div class="custom-featured-img">
+                    <img src="edit.jpg" alt="Custom wedding macaron tower by Opal Oven" loading="lazy">
+                    <div class="custom-featured-badge">Wedding Tower</div>
+                </div>
+                <div class="custom-featured-text">
+                    <p class="section-eyebrow">Featured Creation</p>
+                    <h3 class="custom-featured-title">The Wedding Tower</h3>
+                    <p class="custom-featured-desc">A breathtaking tiered tower of handcrafted macarons, adorned with fresh florals and seasonal fruit. Each tier is thoughtfully composed in your chosen color palette and flavors — a centerpiece that is as stunning to behold as it is to taste.</p>
+                    <p class="custom-featured-desc">Available in any height and configuration, designed to complement your venue and aesthetic perfectly.</p>
+                    <a href="#contact" class="btn-outline">Inquire About Your Event</a>
+                </div>
+            </div>
+
+            <div class="custom-events-grid">
+                <div class="custom-event-card reveal">
+                    <div class="custom-event-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </div>
+                    <h3 class="custom-event-name">Weddings</h3>
+                    <p class="custom-event-desc">Towers, favor boxes, dessert tables, and monogrammed shells in your exact wedding palette.</p>
+                </div>
+                <div class="custom-event-card reveal">
+                    <div class="custom-event-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <h3 class="custom-event-name">Special Events</h3>
+                    <p class="custom-event-desc">Birthdays, anniversaries, galas, and milestones — crafted to match your theme and vision.</p>
+                </div>
+                <div class="custom-event-card reveal">
+                    <div class="custom-event-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <h3 class="custom-event-name">Sporting Events</h3>
+                    <p class="custom-event-desc">Team colors, country flags, trophies — custom designs for World Cup watch parties, Super Bowls, and championship celebrations.</p>
+                </div>
+                <div class="custom-event-card reveal">
+                    <div class="custom-event-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+                    </div>
+                    <h3 class="custom-event-name">Corporate Gifting</h3>
+                    <p class="custom-event-desc">Branded macarons with your company's logo, colors, and messaging — unforgettable client and team gifts.</p>
+                </div>
+            </div>
+
+            <div class="custom-cta reveal">
+                <p>Share your vision and we will bring it to life. No event is too large or too intimate.</p>
+                <a href="#contact" class="btn-primary">Start Your Custom Order</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pull Quote -->
+    <section class="quote-band">
+        <div class="quote-inner">
+            <span class="quote-mark">&ldquo;</span>
+            <blockquote>
+                A macaron is not merely a confection.<br>It is a moment of pure intention.
+            </blockquote>
+            <cite>— Élise Moreau, Executive Pastry Chef, Opal Oven</cite>
+        </div>
+    </section>
+
+    <!-- Contact / Order -->
+    <section class="contact" id="contact">
+        <div class="contact-inner">
+            <div class="contact-text reveal">
+                <p class="section-eyebrow">Place Your Order</p>
+                <h2 class="section-title">Reserve Your<br>Collection</h2>
+                <p class="contact-body">Orders are fulfilled with a minimum of 48 hours' notice. We accommodate same-day requests for established clients. Complimentary delivery within 10 miles of our atelier.</p>
+                <ul class="contact-details">
+                    <li>
+                        <span class="cd-label">By Phone</span>
+                        <span class="cd-value">+1 (212) 555-0192</span>
+                    </li>
+                    <li>
+                        <span class="cd-label">By Email</span>
+                        <span class="cd-value">orders@opaloven.com</span>
+                    </li>
+                    <li>
+                        <span class="cd-label">Atelier Hours</span>
+                        <span class="cd-value">Tuesday – Saturday, 10am – 6pm</span>
+                    </li>
+                    <li>
+                        <span class="cd-label">Location</span>
+                        <span class="cd-value">Virginia</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-form-wrap reveal">
+                <form class="contact-form" id="orderForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Élise" autocomplete="given-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Moreau" autocomplete="family-name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="occasion">Occasion</label>
+                        <select id="occasion" name="occasion">
+                            <option value="" disabled selected>Select an occasion</option>
+                            <option>Personal Indulgence</option>
+                            <option>Gift for Someone Special</option>
+                            <option>Corporate Gifting</option>
+                            <option>Wedding or Private Event</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Request</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us your flavors, quantities, and any special preferences…"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-block">Send Inquiry</button>
+                    <p class="form-note">We will respond within 24 hours.</p>
+                </form>
+                <div class="form-success" id="formSuccess" hidden>
+                    <span class="success-icon">✦</span>
+                    <h3>Thank you for your inquiry.</h3>
+                    <p>We will be in touch within 24 hours to confirm your order.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <span class="logo-mark">✦</span>
+                <span class="footer-logo-name">Opal Oven</span>
+                <p class="footer-tagline">Artisan Macarons &nbsp;·&nbsp; Est. 2026 &nbsp;·&nbsp; Virginia</p>
+            </div>
+            <nav class="footer-nav">
+                <a href="#story">Our Story</a>
+                <a href="#collection">Collection</a>
+                <a href="#gifting">Gifting</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="footer-social">
+                <a href="#" class="social-btn" aria-label="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="#" class="social-btn" aria-label="Pinterest">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.853 0 1.267.641 1.267 1.408 0 .858-.546 2.141-.828 3.329-.236.995.499 1.806 1.476 1.806 1.772 0 3.132-1.867 3.132-4.562 0-2.387-1.716-4.057-4.164-4.057-2.836 0-4.5 2.127-4.5 4.326 0 .856.33 1.773.741 2.274a.3.3 0 0 1 .069.285c-.076.309-.244.995-.277 1.134-.044.183-.145.222-.333.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.966-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Opal Oven. All rights reserved.</p>
+            <p>Virginia</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
