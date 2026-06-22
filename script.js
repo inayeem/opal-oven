@@ -391,15 +391,3 @@ if (orderForm) {
     });
 }
 
-/* ---- Pause marquee on hover ---- */
-const marqueeContent = document.querySelectorAll('.marquee-content');
-const marqueeStrip   = document.querySelector('.marquee-strip');
-
-if (marqueeStrip) {
-    marqueeStrip.addEventListener('mouseenter', () => {
-        marqueeContent.forEach(m => m.style.animationPlayState = 'paused');
-    });
-    marqueeStrip.addEventListener('mouseleave', () => {
-        marqueeContent.forEach(m => m.style.animationPlayState = 'running');
-    });
-}
