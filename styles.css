@@ -915,9 +915,11 @@ button {
 
 .gift-grid {
     display: grid;
-    grid-template-columns: 1fr 1.15fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 28px;
     align-items: start;
+    max-width: 860px;
+    margin: 0 auto;
 }
 
 .gift-card {
@@ -962,7 +964,7 @@ button {
 
 .gv-6  { height: 180px; }
 .gv-12 { height: 220px; }
-.gv-24 { height: 180px; }
+.gv-24 { height: 220px; }
 
 .gift-circles {
     position: absolute;
@@ -1257,7 +1259,7 @@ button {
 
 /* ---------- Quote Band ---------- */
 .quote-band {
-    padding: 100px 48px;
+    padding: 100px 48px 56px;
     background: var(--ivory);
     text-align: center;
     position: relative;
@@ -1605,15 +1607,6 @@ button {
     .macaron-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    .gift-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    .gift-grid .gift-card:last-child {
-        grid-column: 1 / -1;
-        max-width: 480px;
-        margin: 0 auto;
-        width: 100%;
-    }
 }
 
 @media (max-width: 900px) {
@@ -1652,10 +1645,6 @@ button {
         margin: 0 auto;
     }
 
-    .gift-grid .gift-card:last-child {
-        grid-column: auto;
-        max-width: none;
-    }
 
     .footer-top {
         grid-template-columns: 1fr;
